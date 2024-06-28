@@ -15,7 +15,7 @@ const Input = ({
 }: InputProps) => {
   return (
     <div className="flex flex-col pb-1">
-      <label className="mb-1 text-blue-800 text-xs">
+      <label className="mb-1 text-xs text-blue-800">
         {label}
       </label>
 
@@ -23,7 +23,7 @@ const Input = ({
         type={type}
         onChange={(e) => onChange(e.target.value)}
         value={value}
-        className="p-1 shadow rounded border border-gray-400"
+        className="rounded border border-gray-400 p-1 shadow"
       />
     </div>
   );

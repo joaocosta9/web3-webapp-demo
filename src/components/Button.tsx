@@ -1,23 +1,26 @@
 import React from "react";
+import LoadingSpinner from "./LoadingSpinner";
 
 interface Button {
   children: React.ReactNode;
   onClick: () => void;
-  disabled: boolean;
+  isDisabled?: boolean;
+  isPending?: boolean;
 }
 
 const Button = ({
   children,
   onClick,
-  disabled = false,
+  isDisabled = false,
+  isPending = false,
 }: Button) => {
   return (
     <button
-      disabled={disabled}
+      disabled={isDisabled}
       onClick={onClick}
-      className="bg-blue-800 rounded px-2 py-1 text-white text-sm"
+      className={`h-8 rounded bg-blue-800 px-2 text-sm text-white ${(isPending || isDisabled) && "opacity-45"}`}
     >
-      {children}
+      {isPending ? <LoadingSpinner /> : children}
     </button>
   );
 };
