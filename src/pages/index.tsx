@@ -1,12 +1,13 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import Head from "next/head";
-import { useAccount } from "wagmi";
-import Sidebar from "../components/Sidebar";
+import Title from "../components/Title";
 
-const Home = () => {
-  const { address } = useAccount();
-
-  return <div className="flex">My wallet</div>;
+const MyWallet = () => {
+  return (
+    <div className="flex flex-col justify-center">
+      <Title>Wallet</Title>
+      <ConnectButton />
+    </div>
+  );
 };
 
-export default Home;
+export default MyWallet;
