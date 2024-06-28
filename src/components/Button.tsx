@@ -16,7 +16,7 @@ const Button = ({
 }: Button) => {
   return (
     <button
-      disabled={isDisabled}
+      disabled={isDisabled || isPending}
       onClick={onClick}
       className={`h-8 rounded bg-blue-800 px-2 text-sm text-white ${(isPending || isDisabled) && "opacity-45"}`}
     >
