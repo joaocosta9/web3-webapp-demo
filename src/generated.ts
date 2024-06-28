@@ -716,9 +716,6 @@ export const mockTokenAbi = [
 // Todos
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/**
- *
- */
 export const todosAbi = [
   {
     type: 'function',
@@ -755,18 +752,6 @@ export const todosAbi = [
     stateMutability: 'view',
   },
 ] as const
-
-/**
- *
- */
-export const todosAddress = {
-  31337: '0x5FbDB2315678afecb367f032d93F642f64180aa3',
-} as const
-
-/**
- *
- */
-export const todosConfig = { address: todosAddress, abi: todosAbi } as const
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // React
@@ -1346,74 +1331,53 @@ export const useWatchMockTokenTransferEvent =
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link todosAbi}__
- *
- *
  */
 export const useReadTodos = /*#__PURE__*/ createUseReadContract({
   abi: todosAbi,
-  address: todosAddress,
 })
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link todosAbi}__ and `functionName` set to `"getTodo"`
- *
- *
  */
 export const useReadTodosGetTodo = /*#__PURE__*/ createUseReadContract({
   abi: todosAbi,
-  address: todosAddress,
   functionName: 'getTodo',
 })
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link todosAbi}__ and `functionName` set to `"todos"`
- *
- *
  */
 export const useReadTodosTodos = /*#__PURE__*/ createUseReadContract({
   abi: todosAbi,
-  address: todosAddress,
   functionName: 'todos',
 })
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link todosAbi}__
- *
- *
  */
 export const useWriteTodos = /*#__PURE__*/ createUseWriteContract({
   abi: todosAbi,
-  address: todosAddress,
 })
 
 /**
  * Wraps __{@link useWriteContract}__ with `abi` set to __{@link todosAbi}__ and `functionName` set to `"addTodo"`
- *
- *
  */
 export const useWriteTodosAddTodo = /*#__PURE__*/ createUseWriteContract({
   abi: todosAbi,
-  address: todosAddress,
   functionName: 'addTodo',
 })
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link todosAbi}__
- *
- *
  */
 export const useSimulateTodos = /*#__PURE__*/ createUseSimulateContract({
   abi: todosAbi,
-  address: todosAddress,
 })
 
 /**
  * Wraps __{@link useSimulateContract}__ with `abi` set to __{@link todosAbi}__ and `functionName` set to `"addTodo"`
- *
- *
  */
 export const useSimulateTodosAddTodo = /*#__PURE__*/ createUseSimulateContract({
   abi: todosAbi,
-  address: todosAddress,
   functionName: 'addTodo',
 })

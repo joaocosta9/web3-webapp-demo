@@ -6,12 +6,12 @@ const Sidebar = () => {
       <ul className="space-y-2 py-4">
         <li className="pl-4 py-2 hover:bg-gray-700">
           <Link href="/" passHref className="block p-2">
-            My Wallets
+            Wallet
           </Link>
         </li>
         <li className="pl-4 py-2 hover:bg-gray-700">
-          <Link href="/external-wallet" passHref className="block p-2">
-            External Wallet
+          <Link href="/mint" passHref className="block p-2">
+            Mint
           </Link>
         </li>
       </ul>
