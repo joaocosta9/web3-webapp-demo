@@ -10,7 +10,7 @@ const Box: React.FC<LayoutProps> = ({
 }) => {
   return (
     <div
-      className={`flex w-fit flex-col justify-center rounded border border-gray-300 px-8 py-9 shadow ${extraStyles}`}
+      className={`flex w-fit flex-col justify-center rounded-lg border border-gray-300 px-8 py-9 shadow ${extraStyles}`}
     >
       {children}
     </div>

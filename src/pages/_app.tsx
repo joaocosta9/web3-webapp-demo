@@ -13,6 +13,7 @@ import {
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
 import Layout from "../components/Layout";
+import { TransferProvider } from "../components/context/TransferListenerContext";
 
 const config = getDefaultConfig({
   appName: "RainbowKit App",
@@ -31,9 +32,11 @@ function MyApp({
     <WagmiProvider config={config}>
       <QueryClientProvider client={client}>
         <RainbowKitProvider initialChain={31337}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <TransferProvider>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </TransferProvider>
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>

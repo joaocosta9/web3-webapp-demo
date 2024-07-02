@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({
       <Sidebar />
       <div className="flex flex-1 flex-col">
         <TopBar />
-        <div className="flex-1 p-10">
+        <div className="flex-1 p-5">
           {children}
         </div>
       </div>
