@@ -8,9 +8,9 @@ dataSources:
     name: MockToken
     network: base-sepolia
     source:
-      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+      address: "0x336f4565Af9f410927C3D4Bc4fa6AAEAFa192991"
       abi: MockToken
-      startBlock: 0
+      startBlock: 12077077
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7

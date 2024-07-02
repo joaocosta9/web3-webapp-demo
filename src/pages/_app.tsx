@@ -7,7 +7,10 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi";
-import { hardhat } from "wagmi/chains";
+import {
+  baseSepolia,
+  hardhat,
+} from "wagmi/chains";
 import {
   getDefaultConfig,
   RainbowKitProvider,
@@ -18,7 +21,7 @@ import { TransferProvider } from "../components/context/TransferListenerContext"
 const config = getDefaultConfig({
   appName: "RainbowKit App",
   projectId: "YOUR_PROJECT_ID",
-  chains: [hardhat],
+  chains: [hardhat, baseSepolia],
   ssr: true,
 });
 
@@ -31,7 +34,7 @@ function MyApp({
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={client}>
-        <RainbowKitProvider initialChain={31337}>
+        <RainbowKitProvider initialChain={84532}>
           <TransferProvider>
             <Layout>
               <Component {...pageProps} />
