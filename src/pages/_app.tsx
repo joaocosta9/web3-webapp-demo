@@ -16,7 +16,7 @@ import {
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
 import Layout from "../components/Layout";
-import { TransferProvider } from "../components/context/TransferListenerContext";
+import TransferProvider from "../components/context/TransferListenerContext";
 
 const config = getDefaultConfig({
   appName: "RainbowKit App",
