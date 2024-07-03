@@ -1,9 +1,6 @@
 import { useContext } from "react";
 import Box from "../../Box";
-import {
-  TransferProvider,
-  useTransfer,
-} from "../../context/TransferListenerContext";
+import { useTransfer } from "../../context/TransferListenerContext";
 import TransferItem from "./TransferItem";
 import { Address } from "viem";
 

@@ -1,6 +1,4 @@
 import React from "react";
-import { ITransferLog } from "../../../data/interfaces/transfersInterface";
-import { Address } from "viem";
 
 interface ITransferItem {
   from: string;
@@ -15,14 +13,14 @@ export default function TransferItem({
 }: ITransferItem) {
   return (
     <ul className="flex flex-row divide-x-2 divide-gray-400 p-2">
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-1 flex-col gap-1">
         <ItemLabelValue
           label="From"
           value={from}
         />
         <ItemLabelValue label="To" value={to} />
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-1 flex-col items-center">
         {value}
       </div>
     </ul>

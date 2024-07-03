@@ -48,7 +48,7 @@ const MyWallet = () => {
               : "Unkown"}
           </span>
         </Box>
-        {/* <TransferBox address={address} /> */}
+        <TransferBox />
       </div>
     </div>
   );
