@@ -1,4 +1,5 @@
 import React from "react";
+import ItemLabelValue from "../../ItemLabelValue";
 
 interface ITransferItem {
   from: string;
@@ -12,7 +13,7 @@ export default function TransferItem({
   value,
 }: ITransferItem) {
   return (
-    <ul className="flex flex-row divide-x-2 divide-gray-400 p-2">
+    <ul className="flex flex-row divide-x-2 divide-gray-400 border-t-2 p-2">
       <div className="flex flex-1 flex-col gap-1">
         <ItemLabelValue
           label="From"
@@ -20,26 +21,13 @@ export default function TransferItem({
         />
         <ItemLabelValue label="To" value={to} />
       </div>
-      <div className="flex flex-1 flex-col items-center">
-        {value}
+      <div className="flex flex-1 flex-col items-center justify-center">
+        <ItemLabelValue
+          label="Amount"
+          value={value}
+          className="text-lg"
+        />
       </div>
     </ul>
-  );
-}
-
-interface ItemLabelValueProps {
-  label: string;
-  value: string | undefined;
-}
-
-function ItemLabelValue({
-  label,
-  value,
-}: ItemLabelValueProps) {
-  return (
-    <span className="text-sm">
-      <span className="font-bold">{label}:</span>{" "}
-      {value}
-    </span>
   );
 }

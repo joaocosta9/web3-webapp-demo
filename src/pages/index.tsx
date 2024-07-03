@@ -7,6 +7,7 @@ import {
 import { formatEther } from "viem";
 import Box from "../components/Box";
 import TransferBox from "../components/wallet/transfer_box/TransferBox";
+import ItemLabelValue from "../components/ItemLabelValue";
 
 const MyWallet = () => {
   const { isConnected, address } = useAccount();
@@ -34,19 +35,25 @@ const MyWallet = () => {
     <div className="flex flex-col justify-center">
       <Title>Wallet - Mock Token</Title>
       <div className="flex flex-row justify-evenly">
-        <Box>
-          <span className="text-sm text-black">
-            Total Supply:{" "}
-            {totalSupply
-              ? formatEther(totalSupply)
-              : "Unkown"}
-          </span>
-          <span className="text-sm text-black">
-            My balance:{" "}
-            {balance
-              ? formatEther(balance)
-              : "Unkown"}
-          </span>
+        <Box className="gap-4">
+          <ItemLabelValue
+            className="text-md"
+            label="Total Supply"
+            value={
+              totalSupply !== undefined
+                ? formatEther(totalSupply)
+                : "Unkown"
+            }
+          />
+          <ItemLabelValue
+            className="text-md"
+            label="My Balance"
+            value={
+              balance !== undefined
+                ? formatEther(balance)
+                : "Unkown"
+            }
+          />
         </Box>
         <TransferBox />
       </div>

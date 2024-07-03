@@ -8,12 +8,12 @@ interface Button {
   isPending?: boolean;
 }
 
-const Button = ({
+export default function Button({
   children,
   onClick,
   isDisabled = false,
   isPending = false,
-}: Button) => {
+}: Button) {
   return (
     <button
       disabled={isDisabled || isPending}
@@ -23,5 +23,4 @@ const Button = ({
       {isPending ? <LoadingSpinner /> : children}
     </button>
   );
-};
-export default Button;
+}

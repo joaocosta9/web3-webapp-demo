@@ -5,9 +5,9 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({
+export default function Layout({
   children,
-}) => {
+}: LayoutProps) {
   return (
     <div className="flex min-h-screen">
       <Sidebar />
@@ -19,6 +19,4 @@ const Layout: React.FC<LayoutProps> = ({
       </div>
     </div>
   );
-};
-
-export default Layout;
+}
