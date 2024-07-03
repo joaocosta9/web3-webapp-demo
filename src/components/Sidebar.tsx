@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Sidebar = () => {
+export default function Sidebar() {
   return (
     <div className="min-h-screen w-64 bg-gray-800 text-white">
       <ul className="space-y-2 py-4">
@@ -25,6 +25,4 @@ const Sidebar = () => {
       </ul>
     </div>
   );
-};
-
-export default Sidebar;
+}

@@ -28,7 +28,7 @@ export default function Mint() {
   return (
     <div className="flex flex-col items-center">
       <Title>Mint</Title>
-      <Box extraStyles="w-80 gap-8">
+      <Box className="w-80 gap-8">
         {isConnected ? (
           <>
             <span className="text-center text-xs">

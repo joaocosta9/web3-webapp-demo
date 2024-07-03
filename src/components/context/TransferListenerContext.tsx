@@ -27,9 +27,9 @@ const TransferContext = createContext<
   TransferContextProps | undefined
 >(undefined);
 
-export const TransferProvider = ({
+export default function TransferProvider({
   children,
-}: ITransferProviderProps) => {
+}: ITransferProviderProps) {
   const { address, isConnected } = useAccount();
   const [transfers, setTransfers] = useState<
     ITransferLog[]
@@ -58,7 +58,11 @@ export const TransferProvider = ({
   );
 
   useWatchMockTokenTransferEvent({
+    enabled: true,
     onLogs: handleNewTransfer,
+    onError: (error) => {
+      console.log(error);
+    },
   });
 
   return (
@@ -68,7 +72,7 @@ export const TransferProvider = ({
       {children}
     </TransferContext.Provider>
   );
-};
+}
 
 export const useTransfer =
   (): TransferContextProps => {

@@ -7,12 +7,12 @@ interface InputProps {
   onChange: (newValue: string) => void;
 }
 
-const Input = ({
-  type,
+export default function Input({
+  type = "text",
   label,
   value,
   onChange,
-}: InputProps) => {
+}: InputProps) {
   return (
     <div className="flex flex-col pb-1">
       <label className="mb-1 text-xs text-blue-800">
@@ -27,10 +27,4 @@ const Input = ({
       />
     </div>
   );
-};
-
-Input.defaultProps = {
-  type: "text",
-};
-
-export default Input;
+}
